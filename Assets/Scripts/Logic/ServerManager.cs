@@ -8,11 +8,41 @@ using com.mineorbit.dungeonsanddungeonscommon;
 public class ServerManager : MonoBehaviour
 {
     public static ServerManager instance;
-    public enum State{Setup,Prepare,Lobby,Play,GameOver};
-    public enum GameAction {GoLive, Prepare,StartGame,EndGame,WinGame,CancelGame};
+
+    public class State : CustomEnum
+    {
+        public State(string val, int card) : base(val, card)
+        {
+            Value = val;
+            cardinal = card;
+        }
+
+
+        public static State Setup = new State("Setup",0);
+        public static State Prepare = new State("Prepare",1);
+        public static State Lobby = new State("Lobby",2);
+        public static State Play = new State("Play",3);
+        public static State GameOver = new State("GameOver",4);
+    }
+
+    public class GameAction : CustomEnum
+    {
+        public GameAction(string val, int card) : base(val, card)
+        {
+            Value = val;
+            cardinal = card;
+        }
+
+
+        public static GameAction GoLive = new GameAction("GoLive",0);
+        public static GameAction Prepare = new GameAction("GoLive",1);
+        public static GameAction StartGame = new GameAction("GoLive",2);
+        public static GameAction EndGame = new GameAction("GoLive",3);
+        public static GameAction WinGame = new GameAction("GoLive",4);
+        public static GameAction CancelGame = new GameAction("GoLive",5);
+    }
     FSM<State, GameAction> serverState;
 
-    public InstantionTarget playerTarget;
 
     //Networking
     Server server;
