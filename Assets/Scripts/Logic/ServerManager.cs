@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System;
+using com.mineorbit.dungeonsanddungeonscommon;
+
 public class ServerManager : MonoBehaviour
 {
     public static ServerManager instance;
@@ -50,15 +52,14 @@ public class ServerManager : MonoBehaviour
 
     public void AddClient(int localId, Client c)
     {
-        PlayerManager.AddPlayer(localId,c);
+        PlayerManager.playerManager.Add(localId,"Test", true);
     }
 
 
     public void RemoveClient(int localid)
     {
         Server.Disconnect(localid);
-        PlayerManager.RemovePlayer(localid);
-        Server.RemoveClient(localid);
+        PlayerManager.playerManager.Remove(localid);
         
     }
 
@@ -94,8 +95,8 @@ public class ServerManager : MonoBehaviour
 
             Debug.Log("Starting Round, no new connections");
             server.StopListen();
-            GameReadyPacket answerPacket = new GameReadyPacket(4,true);
-            Server.SendPacketToAll(answerPacket);
+            // GameReadyPacket answerPacket = new GameReadyPacket(4,true);
+            // Server.SendPacketToAll(answerPacket);
             GameLogic.current.StartRound();
 
         };
@@ -108,25 +109,25 @@ public class ServerManager : MonoBehaviour
         Action<GameAction> actCancel = x => {
             Debug.Log("Game canceled");
 
-            Level.Clear();
+            LevelManager.Clear();
 
             GameLogic.EndRound();
 
             GameLogic.PrepareRound(this.transform);
-            PlayerManager.SpawnPlayersInLobby();
+            SpawnPlayersInLobby();
             server.Start();
 
         };
         Action<GameAction> actWin = x => {
 
 
-            WinPacket packet = new WinPacket();
-            Server.SendPacketToAll(packet);
+            //WinPacket packet = new WinPacket();
+            //Server.SendPacketToAll(packet);
 
-            Level.Clear();
+            LevelManager.Clear();
 
 
-            PlayerManager.SpawnPlayersInLobby();
+            SpawnPlayersInLobby();
             server.Start();
             GameLogic.EndRound();
             GameLogic.PrepareRound(this.transform);
@@ -150,9 +151,15 @@ public class ServerManager : MonoBehaviour
         serverState.transitions.Add(new Tuple<State, GameAction>(State.Play, GameAction.CancelGame), new Tuple<Action<GameAction>, State>(actCancel, State.Lobby));
     }
 
+    void SpawnPlayersInLobby()
+    {
+        for (int i = 0; i < 4; i++)
+            PlayerManager.playerManager.SpawnPlayer(i, new Vector3(i * 8, 0, 0));
+    }
+
     void Stop()
     {
-        Server.DisconnectAll();
+        server.DisconnectAll();
         server.StopListen();
     }
 

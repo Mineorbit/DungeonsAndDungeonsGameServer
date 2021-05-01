@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using com.mineorbit.dungeonsanddungeonscommon;
 
 public class GameLogic : MonoBehaviour
 {
@@ -15,29 +16,14 @@ public class GameLogic : MonoBehaviour
         current = this;
     }
 
-    public static void CheckForWin(bool[] insidePlayers)
-    {
-        bool win = true;
-        bool anyone = false;
-        for(int i = 0;i<4;i++)
-        {
-            if (PlayerManager.Exists(i))
-            {
-                anyone = true;
-                win = win && insidePlayers[i];
-            }
-        }
-        if(win&&anyone)
-        ServerManager.instance.performAction(ServerManager.GameAction.WinGame);
-    }
-
+    
     //Called on Victory
     public static void EndRound()
     {
         //Despawn Players
         for(int i = 0;i<4;i++)
         {
-            PlayerManager.DespawnPlayer(i);
+            PlayerManager.playerManager.DespawnPlayer(i);
         }
 
         if (GameLogic.current != null)
@@ -54,13 +40,13 @@ public class GameLogic : MonoBehaviour
 
     public static void ClearRound()
     {
-        Level.Clear();
+        EndRound();
+        LevelManager.Clear();
 
         for (int i = 0; i < 4; i++)
         {
             ServerManager.instance.RemoveClient(i);
         }
-        EndRound();
     }
 
     public void StartRound()
@@ -69,11 +55,12 @@ public class GameLogic : MonoBehaviour
         for (int i = 0; i < 4; i++)
         {
             if (PlayerManager.playerManager.players[i] != null)
-                PlayerManager.playerManager.players[i].Reset();
+                PlayerManager.playerManager.SpawnPlayer(i, PlayerManager.playerManager.GetSpawnLocation(i));
         }
-        
+
         //Set Level As Selected
-        LevelData.LevelMetaData levelMetaData = LevelManager.GetSelectedLevel();
+        LevelMetaData levelMetaData = null;
+        // = LevelManager.GetSelectedLevel();
 
 
         if (levelMetaData == null)
@@ -83,15 +70,15 @@ public class GameLogic : MonoBehaviour
         else
         { 
 
-            LevelManager.Load(levelMetaData);
+            LevelDataManager.Load(levelMetaData);
 
             //Send LevelData
 
             //and Spawn Players in Positions
             for (int i = 0;i<4;i++)
             {
-            Level.currentLevel.SendChunkAt(Level.currentLevel.spawn[i].transform.position, i);
-            PlayerManager.SpawnPlayer(i);
+            //Level.currentLevel.SendChunkAt(Level.currentLevel.spawn[i].transform.position, i);
+            PlayerManager.playerManager.SpawnPlayer(i, PlayerManager.playerManager.GetSpawnLocation(i));
             }
         }
 
