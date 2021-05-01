@@ -88,7 +88,7 @@ public class ServerManager : MonoBehaviour
 
     public void RemoveClient(int localid)
     {
-        Server.Disconnect(localid);
+        server.Disconnect(localid);
         PlayerManager.playerManager.Remove(localid);
         
     }
@@ -196,6 +196,14 @@ public class ServerManager : MonoBehaviour
     public void performAction(GameAction action)
     {
         serverState.Move(action);
+    }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            Debug.Log(server.ToString());
+        }
     }
 
     void OnDisable()
