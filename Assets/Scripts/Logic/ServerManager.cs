@@ -189,8 +189,11 @@ public class ServerManager : MonoBehaviour
 
     void Stop()
     {
+        if(server != null)
+        { 
         server.DisconnectAll();
         server.StopListen();
+        }
     }
 
     public void performAction(GameAction action)
