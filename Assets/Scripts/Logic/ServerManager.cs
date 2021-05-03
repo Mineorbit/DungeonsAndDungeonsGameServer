@@ -45,7 +45,7 @@ public class ServerManager : MonoBehaviour
 
 
     //Networking
-    Server server;
+    public Server server;
 
     //Settings
     public bool Local = true;
@@ -54,7 +54,7 @@ public class ServerManager : MonoBehaviour
 
     void Start()
     {
-
+        NetworkLevelObject.enableNetworking = true;
         if(instance==null)
         {
             instance = this;
