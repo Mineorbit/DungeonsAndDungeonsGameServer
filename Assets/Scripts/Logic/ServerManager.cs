@@ -88,6 +88,7 @@ public class ServerManager : MonoBehaviour
 
     public void RemoveClient(int localid)
     {
+
         server.Disconnect(localid);
         PlayerManager.playerManager.Remove(localid);
         
