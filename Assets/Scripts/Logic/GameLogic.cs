@@ -51,15 +51,16 @@ public class GameLogic : MonoBehaviour
 
     public void StartRound()
     {
+        /*
         //Reset Player Data if exists
         for (int i = 0; i < 4; i++)
         {
             if (PlayerManager.playerManager.players[i] != null)
                 PlayerManager.playerManager.SpawnPlayer(i, PlayerManager.playerManager.GetSpawnLocation(i));
         }
-
+        */
         //Set Level As Selected
-        LevelMetaData levelMetaData = null;
+        LevelMetaData levelMetaData = LevelDataManager.instance.localLevels[0];
         // = LevelManager.GetSelectedLevel();
 
 

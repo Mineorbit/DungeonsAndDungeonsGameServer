@@ -126,8 +126,7 @@ public class ServerManager : MonoBehaviour
 
             Debug.Log("Starting Round, no new connections");
             server.StopListen();
-            // GameReadyPacket answerPacket = new GameReadyPacket(4,true);
-            // Server.SendPacketToAll(answerPacket);
+
             GameLogic.current.StartRound();
 
         };
@@ -207,6 +206,10 @@ public class ServerManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.L))
         {
             Debug.Log(server.ToString());
+        }
+        if(Input.GetKeyDown(KeyCode.S))
+        {
+            performAction(GameAction.StartGame);
         }
     }
 
