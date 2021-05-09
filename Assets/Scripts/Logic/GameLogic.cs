@@ -35,7 +35,21 @@ public class GameLogic : MonoBehaviour
     public static void PrepareRound(Transform t)
     {
         t.gameObject.AddComponent<GameLogic>();
-        //Hier war mal ein player spawn ist aber falsch per se
+
+
+        //Set Level As Selected
+        // = LevelManager.GetSelectedLevel();
+
+        LevelMetaData levelMetaData = LevelDataManager.instance.localLevels[0];
+
+        if (levelMetaData == null)
+        {
+            ServerManager.instance.performAction(ServerManager.GameAction.EndGame);
+        }
+        LevelDataManager.Load(levelMetaData);
+
+
+        NetworkManagerHandler.RequestPrepareRound();
     }
 
     public static void ClearRound()
@@ -52,36 +66,17 @@ public class GameLogic : MonoBehaviour
     public void StartRound()
     {
         /*
-        //Reset Player Data if exists
-        for (int i = 0; i < 4; i++)
-        {
-            if (PlayerManager.playerManager.players[i] != null)
-                PlayerManager.playerManager.SpawnPlayer(i, PlayerManager.playerManager.GetSpawnLocation(i));
-        }
+
         */
-        //Set Level As Selected
-        LevelMetaData levelMetaData = LevelDataManager.instance.localLevels[0];
-        // = LevelManager.GetSelectedLevel();
-
-
-        if (levelMetaData == null)
+        //and Spawn Players in Positions
+        for (int i = 0;i<4;i++)
         {
-            ServerManager.instance.performAction(ServerManager.GameAction.EndGame); 
-        }
-        else
-        { 
-
-            LevelDataManager.Load(levelMetaData);
-
-            //Send LevelData
-
-            //and Spawn Players in Positions
-            for (int i = 0;i<4;i++)
-            {
             //Level.currentLevel.SendChunkAt(Level.currentLevel.spawn[i].transform.position, i);
             PlayerManager.playerManager.SpawnPlayer(i, PlayerManager.playerManager.GetSpawnLocation(i));
-            }
         }
+
+
+        NetworkManagerHandler.RequestStartRound();
 
     }
     

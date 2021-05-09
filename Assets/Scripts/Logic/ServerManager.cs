@@ -105,9 +105,6 @@ public class ServerManager : MonoBehaviour
         serverState.state = State.Setup;
         Action<GameAction> actSetup = x => {
 
-            Debug.Log("Setting up");
-
-            GameLogic.PrepareRound(this.transform);
 
             SetupServer();
             Debug.Log("Setup done");
@@ -122,6 +119,11 @@ public class ServerManager : MonoBehaviour
 
         Action<GameAction> actStartGame = x => {
 
+
+
+            Debug.Log("Setting up");
+
+            GameLogic.PrepareRound(this.transform);
 
 
             Debug.Log("Starting Round, no new connections");
