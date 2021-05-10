@@ -71,8 +71,10 @@ public class GameLogic : MonoBehaviour
         //and Spawn Players in Positions
         for (int i = 0;i<4;i++)
         {
-            //Level.currentLevel.SendChunkAt(Level.currentLevel.spawn[i].transform.position, i);
-            PlayerManager.playerManager.SpawnPlayer(i, PlayerManager.playerManager.GetSpawnLocation(i));
+            Debug.Log("Spawn "+i);
+            Vector3 spawn = PlayerManager.playerManager.GetSpawnLocation(i);
+            Debug.Log(spawn);
+            PlayerManager.playerManager.SpawnPlayer(i, spawn);
         }
 
 
