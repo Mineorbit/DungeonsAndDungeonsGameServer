@@ -56,7 +56,9 @@ public class ServerManager : MonoBehaviour
 
     void Start()
     {
-        if(instance==null)
+
+        Level.instantiateType = Level.InstantiateType.Default;
+        if (instance==null)
         {
             instance = this;
         }else if(instance!=this)
@@ -123,11 +125,9 @@ public class ServerManager : MonoBehaviour
 
             Debug.Log("Setting up");
 
-            Level.instantiateType = Level.InstantiateType.Default;
-
             GameLogic.PrepareRound(this.transform);
 
-            Level.instantiateType = Level.InstantiateType.Play;
+
         };
 
 
