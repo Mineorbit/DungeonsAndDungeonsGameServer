@@ -46,8 +46,9 @@ public class GameLogic : MonoBehaviour
         {
             ServerManager.instance.performAction(ServerManager.GameAction.EndGame);
         }
-        LevelDataManager.Load(levelMetaData,Level.InstantiateType.Play);
+        LevelDataManager.Load(levelMetaData,Level.InstantiateType.Default);
 
+        Level.instantiateType = Level.InstantiateType.Play;
 
         NetworkManagerHandler.RequestPrepareRound();
     }
