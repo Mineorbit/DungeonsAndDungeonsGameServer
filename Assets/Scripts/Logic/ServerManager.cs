@@ -122,9 +122,12 @@ public class ServerManager : MonoBehaviour
         {
 
             Debug.Log("Setting up");
-            LevelDataManager.instance.loadType = LevelDataManager.LoadType.Near;
+
+            Level.instantiateType = Level.InstantiateType.Default;
+
             GameLogic.PrepareRound(this.transform);
 
+            Level.instantiateType = Level.InstantiateType.Play;
         };
 
 
