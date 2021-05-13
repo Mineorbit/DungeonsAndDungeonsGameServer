@@ -18,19 +18,7 @@ public class GameLogic : MonoBehaviour
 
     
     //Called on Victory
-    public static void EndRound()
-    {
-        //Despawn Players
-        for(int i = 0;i<4;i++)
-        {
-            PlayerManager.playerManager.DespawnPlayer(i);
-        }
-
-        if (GameLogic.current != null)
-        {
-            Destroy(GameLogic.current);
-        }
-    }
+    
 
     public static void PrepareRound(Transform t)
     {
@@ -78,12 +66,29 @@ public class GameLogic : MonoBehaviour
             PlayerManager.playerManager.SpawnPlayer(i, spawn);
         }
 
+        LevelManager.StartRound(resetDynamic: false);
 
         NetworkManagerHandler.RequestStartRound();
 
     }
-    
-    
-   
-    
+
+    public static void EndRound()
+    {
+        //Despawn Players
+        for (int i = 0; i < 4; i++)
+        {
+            PlayerManager.playerManager.DespawnPlayer(i);
+        }
+
+        LevelManager.EndRound(resetDynamic: true);
+
+        if (GameLogic.current != null)
+        {
+            Destroy(GameLogic.current);
+        }
+    }
+
+
+
+
 }
