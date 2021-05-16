@@ -98,6 +98,11 @@ public class ServerManager : MonoBehaviour
     }
 
 
+    public void OnDestroy()
+    {
+        Server.instance.DisconnectAll();
+    }
+
     public State GetState()
     {
         return serverState.state;
