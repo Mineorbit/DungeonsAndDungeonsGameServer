@@ -77,8 +77,7 @@ public class PlayLogic : MonoBehaviour
 
     public static void WinRound()
     {
-        State.WinRound winRound = new State.WinRound();
-        Server.instance.WriteAll(winRound);
+        NetworkManagerHandler.RequestWinRound();
     }
 
     public static void EndRound()
