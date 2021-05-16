@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using com.mineorbit.dungeonsanddungeonscommon;
 
-public class GameLogic : MonoBehaviour
+public class PlayLogic : MonoBehaviour
 {
 
     long levelId = 0;
-    public static GameLogic current;
+    public static PlayLogic current;
     
     
     public void Awake()
@@ -22,7 +22,7 @@ public class GameLogic : MonoBehaviour
 
     public static void PrepareRound(Transform t)
     {
-        t.gameObject.AddComponent<GameLogic>();
+        t.gameObject.AddComponent<PlayLogic>();
 
 
         //Set Level As Selected
@@ -82,9 +82,9 @@ public class GameLogic : MonoBehaviour
 
         LevelManager.EndRound(resetDynamic: true);
 
-        if (GameLogic.current != null)
+        if (PlayLogic.current != null)
         {
-            Destroy(GameLogic.current);
+            Destroy(PlayLogic.current);
         }
     }
 

@@ -125,7 +125,7 @@ public class ServerManager : MonoBehaviour
 
             Debug.Log("Setting up");
 
-            GameLogic.PrepareRound(this.transform);
+            PlayLogic.PrepareRound(this.transform);
 
 
         };
@@ -135,12 +135,12 @@ public class ServerManager : MonoBehaviour
             Debug.Log("Starting Round, no new connections");
             server.StopListen();
 
-            GameLogic.current.StartRound();
+            PlayLogic.current.StartRound();
 
         };
         Action<GameAction> actDropGame = x => {
             Debug.Log("Restarting");
-            GameLogic.ClearRound();
+            PlayLogic.ClearRound();
             server.Start();
 
         };
@@ -149,9 +149,9 @@ public class ServerManager : MonoBehaviour
 
             LevelManager.Clear();
 
-            GameLogic.EndRound();
+            PlayLogic.EndRound();
 
-            GameLogic.PrepareRound(this.transform);
+            PlayLogic.PrepareRound(this.transform);
             SpawnPlayersInLobby();
             server.Start();
 
@@ -167,8 +167,8 @@ public class ServerManager : MonoBehaviour
 
             SpawnPlayersInLobby();
             server.Start();
-            GameLogic.EndRound();
-            GameLogic.PrepareRound(this.transform);
+            PlayLogic.EndRound();
+            PlayLogic.PrepareRound(this.transform);
 
             foreach(Player p in PlayerManager.playerManager.players)
             {
