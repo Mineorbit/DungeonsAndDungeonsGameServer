@@ -34,6 +34,7 @@ public class PlayLogic : MonoBehaviour
         {
             ServerManager.instance.performAction(ServerManager.GameAction.EndGame);
         }
+
         LevelDataManager.Load(levelMetaData,Level.InstantiateType.Default);
 
         Level.instantiateType = Level.InstantiateType.Play;
@@ -68,8 +69,16 @@ public class PlayLogic : MonoBehaviour
 
         LevelManager.StartRound(resetDynamic: false);
 
+        PlayerGoal.GameWinEvent.AddListener(WinRound);
+
         NetworkManagerHandler.RequestStartRound();
 
+    }
+
+    public static void WinRound()
+    {
+        State.WinRound winRound = new State.WinRound();
+        Server.instance.WriteAll(winRound);
     }
 
     public static void EndRound()
@@ -80,12 +89,17 @@ public class PlayLogic : MonoBehaviour
             PlayerManager.playerManager.DespawnPlayer(i);
         }
 
+
+
         LevelManager.EndRound(resetDynamic: true);
 
         if (PlayLogic.current != null)
         {
             Destroy(PlayLogic.current);
         }
+
+
+        ServerManager.instance.performAction(ServerManager.GameAction.EndGame);
     }
 
 
