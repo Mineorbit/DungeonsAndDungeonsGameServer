@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using com.mineorbit.dungeonsanddungeonscommon;
+using UnityEngine.Events;
 
 public class PlayLogic : MonoBehaviour
 {
 
     long levelId = 0;
     public static PlayLogic current;
-    
+    UnityEvent winEvent = new UnityEvent();
     
     public void Awake()
     {
@@ -16,9 +17,10 @@ public class PlayLogic : MonoBehaviour
         current = this;
     }
 
-    
+
     //Called on Victory
-    
+
+    bool preparing = false;
 
     public static void PrepareRound(Transform t)
     {
@@ -39,33 +41,53 @@ public class PlayLogic : MonoBehaviour
 
         Level.instantiateType = Level.InstantiateType.Play;
 
-        NetworkManagerHandler.RequestPrepareRound();
-    }
+        
 
-    public static void ClearRound()
-    {
-        EndRound();
-        LevelManager.Clear();
+        NetworkManagerHandler.RequestPrepareRound();
 
         for (int i = 0; i < 4; i++)
         {
-            ServerManager.instance.RemoveClient(i);
-        }
-    }
-
-    public void StartRound()
-    {
-        /*
-
-        */
-        //and Spawn Players in Positions
-        for (int i = 0;i<4;i++)
-        {
-            Debug.Log("Spawn "+i);
+            Debug.Log("Spawn " + i);
             Vector3 spawn = PlayerManager.playerManager.GetSpawnLocation(i);
             Debug.Log(spawn);
             PlayerManager.playerManager.SpawnPlayer(i, spawn);
         }
+        current.preparing = true;
+    }
+
+    float eps = 0.05f;
+    bool PlayersInSpawn()
+    {
+        for(int i = 0; i < 4;i++)
+        {
+            Player p = PlayerManager.GetPlayerById(i);
+            
+            if (p!= null)
+            {
+                float dist = (p.transform.position - PlayerManager.playerManager.GetSpawnLocation(i)).magnitude;
+                if(dist > eps)
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+
+    public void Update()
+    {
+        if(preparing && PlayersInSpawn())
+        {
+            preparing = false;
+            Invoke("StartRound",2f);
+        }
+    }
+
+
+
+    public void StartRound()
+    {
 
         LevelManager.StartRound(resetDynamic: false);
 
@@ -75,9 +97,14 @@ public class PlayLogic : MonoBehaviour
 
     }
 
+
     public static void WinRound()
     {
+        current.winEvent.Invoke();
         NetworkManagerHandler.RequestWinRound();
+
+        EndRound();
+
     }
 
     public static void EndRound()
@@ -102,6 +129,18 @@ public class PlayLogic : MonoBehaviour
     }
 
 
+    public static void ClearRound()
+    {
+        EndRound();
+        LevelManager.Clear();
+
+        for (int i = 0; i < 4; i++)
+        {
+            ServerManager.instance.RemoveClient(i);
+        }
+
+
+    }
 
 
 }

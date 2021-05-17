@@ -129,6 +129,7 @@ public class ServerManager : MonoBehaviour
         {
 
             Debug.Log("Setting up");
+            server.StopListen();
 
             PlayLogic.PrepareRound(this.transform);
 
@@ -136,19 +137,14 @@ public class ServerManager : MonoBehaviour
         };
 
 
-        Action<GameAction> actStartGame = x => {
-            Debug.Log("Starting Round, no new connections");
-            server.StopListen();
 
-            PlayLogic.current.StartRound();
-
-        };
         Action<GameAction> actDropGame = x => {
             Debug.Log("Restarting");
             PlayLogic.ClearRound();
             server.Start();
 
         };
+
         Action<GameAction> actCancel = x => {
             Debug.Log("Game canceled");
 
@@ -161,11 +157,10 @@ public class ServerManager : MonoBehaviour
             server.Start();
 
         };
+
         Action<GameAction> actWin = x => {
 
 
-            //WinPacket packet = new WinPacket();
-            //Server.SendPacketToAll(packet);
 
             LevelManager.Clear();
 
@@ -188,8 +183,7 @@ public class ServerManager : MonoBehaviour
         serverState.transitions.Add(new Tuple<State, GameAction>(State.Setup, GameAction.PrepareServer), new Tuple<Action<GameAction>, State>(actSetup, State.Prepare));
 
         serverState.transitions.Add(new Tuple<State,GameAction>(State.Prepare,GameAction.GoLive),new Tuple<Action<GameAction>,State>(actLive,State.Lobby));
-        serverState.transitions.Add(new Tuple<State, GameAction>(State.Lobby, GameAction.PrepareGame), new Tuple<Action<GameAction>, State>(actPrepareGame, State.Load));
-        serverState.transitions.Add(new Tuple<State, GameAction>(State.Load, GameAction.StartGame), new Tuple<Action<GameAction>, State>(actStartGame, State.Play));
+        serverState.transitions.Add(new Tuple<State, GameAction>(State.Lobby, GameAction.PrepareGame), new Tuple<Action<GameAction>, State>(actPrepareGame, State.Play));
 
         serverState.transitions.Add(new Tuple<State, GameAction>(State.Play, GameAction.EndGame), new Tuple<Action<GameAction>, State>(actDropGame, State.Lobby));
         serverState.transitions.Add(new Tuple<State, GameAction>(State.Play, GameAction.WinGame), new Tuple<Action<GameAction>, State>(actWin, State.Lobby));
@@ -222,13 +216,9 @@ public class ServerManager : MonoBehaviour
         {
             Debug.Log(server.ToString());
         }
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            performAction(GameAction.PrepareGame);
-        }else
         if(Input.GetKeyDown(KeyCode.S))
         {
-            performAction(GameAction.StartGame);
+            performAction(GameAction.PrepareGame);
         }
     }
 
