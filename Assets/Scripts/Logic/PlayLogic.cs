@@ -103,7 +103,7 @@ public class PlayLogic : MonoBehaviour
         current.winEvent.Invoke();
         NetworkManagerHandler.RequestWinRound();
 
-        EndRound();
+        ServerManager.instance.performAction(ServerManager.GameAction.WinGame);
 
     }
 

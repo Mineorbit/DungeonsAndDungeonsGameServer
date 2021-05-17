@@ -54,7 +54,7 @@ public class CommandLine : MonoBehaviour
                 Vector3 position = new Vector3(float.Parse(parts[2]), float.Parse(parts[3]), float.Parse(parts[4]));
                 PlayerManager.playerManager.GetPlayer(Int32.Parse(parts[1])).GetComponent<Player>().Teleport(position);
             }
-            if(com == Command.Teleport)
+            if(com == Command.Spawn)
             {
                 Vector3 position = new Vector3(float.Parse(parts[2]), float.Parse(parts[3]), float.Parse(parts[4]));
                 PlayerManager.playerManager.GetPlayer(Int32.Parse(parts[1])).GetComponent<Player>().Spawn(position,new Quaternion(0,0,0,0),true);
