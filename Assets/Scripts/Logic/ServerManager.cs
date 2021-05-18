@@ -133,7 +133,7 @@ public class ServerManager : MonoBehaviour
 
             Debug.Log("Setting up");
             server.StopListen();
-            Destroy(lobbyLogic);
+            MainCaller.Do( () =>Destroy(lobbyLogic));
             PlayLogic.PrepareRound(this.transform);
 
 
