@@ -107,6 +107,8 @@ public class ServerManager : MonoBehaviour
     {
         return serverState.state;
     }
+
+    private LobbyLogic lobbyLogic;
     void SetupFSM()
     {
         serverState = new FSM<State, GameAction>();
@@ -123,6 +125,7 @@ public class ServerManager : MonoBehaviour
             Debug.Log("Opening Socket");
             server.Start();
             NetworkManager.isConnected = true;
+            lobbyLogic = AddComponent<LobbyLogic>();
         };
 
         Action<GameAction> actPrepareGame = x =>
@@ -130,7 +133,7 @@ public class ServerManager : MonoBehaviour
 
             Debug.Log("Setting up");
             server.StopListen();
-
+            Destroy(lobbyLogic);
             PlayLogic.PrepareRound(this.transform);
 
 
