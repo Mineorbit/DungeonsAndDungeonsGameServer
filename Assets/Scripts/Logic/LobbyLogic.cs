@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LobbyLogic : MonoBehaviour
 {
-    bool[] ready = new bool[4];
+    public bool[] ready = new bool[4];
     public void Start()
     {
         NetworkManager.readyEvent.AddListener((x) => { ready[x.Item1] = x.Item2;
@@ -26,7 +26,11 @@ public class LobbyLogic : MonoBehaviour
             }
         }
         if(c>0)
-            ServerManager.instance.performAction(ServerManager.GameAction.PrepareGame);
+            
+            MainCaller.Do( () =>
+            {
+                ServerManager.instance.performAction(ServerManager.GameAction.PrepareGame);
+            });
     }
     
 }

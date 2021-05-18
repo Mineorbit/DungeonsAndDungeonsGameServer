@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62347b47-7030-4f1c-8019-02061def4fbc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logic/LobbyLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Logic/LobbyLogic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" afterDir="false" />
     </list>
@@ -18,8 +19,9 @@
       <option value="$PROJECT_DIR$/Assets/CommandLine.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Entity/Entity.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/EntityNetworkHandler.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Logic/LobbyLogic.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/NetworkManagerHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Logic/LobbyLogic.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1siAR0IWGSfhFnbHtcU7A4a3gT3" />
@@ -73,6 +75,7 @@
       <updated>1621345029850</updated>
       <workItem from="1621345033153" duration="1600000" />
       <workItem from="1621357192244" duration="804000" />
+      <workItem from="1621358230903" duration="475000" />
     </task>
     <servers />
   </component>

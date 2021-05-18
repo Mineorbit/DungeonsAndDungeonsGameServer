@@ -130,10 +130,9 @@ public class ServerManager : MonoBehaviour
 
         Action<GameAction> actPrepareGame = x =>
         {
-
             Debug.Log("Setting up");
             server.StopListen();
-            MainCaller.Do( () =>Destroy(lobbyLogic));
+            Destroy(lobbyLogic);
             PlayLogic.PrepareRound(this.transform);
 
 
