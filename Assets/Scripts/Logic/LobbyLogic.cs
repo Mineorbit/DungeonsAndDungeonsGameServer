@@ -15,22 +15,24 @@ public class LobbyLogic : MonoBehaviour
 
     void CheckGo()
     {
-        int c = 0;
-        for(int i = 0; i<4;i++ )
+        MainCaller.Do( () =>
         {
-            if (PlayerManager.GetPlayerById(i) != null)
+            int c = 0;
+            for(int i = 0; i<4;i++ )
             {
-                c++;
-                if (!ready[i])
-                    return;
+                if (PlayerManager.playerManager.players[i] != null)
+                {
+                    c++;
+                    if (!ready[i])
+                        return;
+                }
             }
-        }
-        if(c>0)
-            
-            MainCaller.Do( () =>
+
+            if (c > 0)
             {
-                ServerManager.instance.performAction(ServerManager.GameAction.PrepareGame);
-            });
+                ServerManager.instance.go = true;
+            }
+        });
     }
     
 }

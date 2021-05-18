@@ -88,12 +88,22 @@ public class ServerManager : MonoBehaviour
         PlayerManager.playerManager.Add(localId,"Test", true);
     }
 
+    public bool go;
 
+    public void Update()
+    {
+        if (go)
+        {
+            go = false;
+            instance.performAction(ServerManager.GameAction.PrepareGame);
+        }
+    }
     public void RemoveClient(int localid)
     {
 
         server.Disconnect(localid);
         PlayerManager.playerManager.Remove(localid);
+        
         
     }
 
@@ -119,15 +129,15 @@ public class ServerManager : MonoBehaviour
             SetupServer();
             Debug.Log("Setup done");
             serverState.Move(GameAction.GoLive);
+            lobbyLogic = gameObject.AddComponent<LobbyLogic>();
 
         };
         Action<GameAction> actLive = x => {
             Debug.Log("Opening Socket");
             server.Start();
             NetworkManager.isConnected = true;
-            lobbyLogic = gameObject.AddComponent<LobbyLogic>();
         };
-
+        
         Action<GameAction> actPrepareGame = x =>
         {
             Debug.Log("Setting up");
