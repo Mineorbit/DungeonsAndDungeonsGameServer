@@ -210,18 +210,6 @@ public class ServerManager : MonoBehaviour
         serverState.Move(action);
     }
 
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.L))
-        {
-            Debug.Log(server.ToString());
-        }
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            performAction(GameAction.PrepareGame);
-        }
-    }
-
     void OnDisable()
     {
         Debug.Log("Server stopping");
