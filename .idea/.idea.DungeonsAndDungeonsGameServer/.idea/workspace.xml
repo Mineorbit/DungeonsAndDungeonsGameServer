@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62347b47-7030-4f1c-8019-02061def4fbc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CommandLine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CommandLine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +16,8 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" />
       <option value="$PROJECT_DIR$/Assets/CommandLine.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Entity/Entity.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/EntityNetworkHandler.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1siAR0IWGSfhFnbHtcU7A4a3gT3" />
@@ -37,6 +33,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -69,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1621345029850</updated>
-      <workItem from="1621345033153" duration="740000" />
+      <workItem from="1621345033153" duration="1600000" />
     </task>
     <servers />
   </component>
