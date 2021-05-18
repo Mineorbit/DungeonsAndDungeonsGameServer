@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62347b47-7030-4f1c-8019-02061def4fbc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logic/LobbyLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Logic/LobbyLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="62347b47-7030-4f1c-8019-02061def4fbc" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,12 +10,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/CommandLine.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Entity/Entity.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/EntityNetworkHandler.cs" />
-      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/NetworkManagerHandler.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Client.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Logic/LobbyLogic.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" />
@@ -27,6 +30,7 @@
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/NetworkHandler.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/LevelLoadTargetNetworkHandler.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/LevelObjectNetworkHandler.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/NetworkManagerHandler.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1siAR0IWGSfhFnbHtcU7A4a3gT3" />
@@ -83,6 +87,7 @@
       <workItem from="1621358230903" duration="475000" />
       <workItem from="1621359006605" duration="653000" />
       <workItem from="1621359714806" duration="3030000" />
+      <workItem from="1621368720507" duration="116000" />
     </task>
     <servers />
   </component>

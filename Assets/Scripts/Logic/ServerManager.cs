@@ -45,14 +45,15 @@ public class ServerManager : MonoBehaviour
     }
     FSM<State, GameAction> serverState;
 
-
+    public GameObject playerStore;
     //Networking
     public Server server;
 
     //Settings
     public bool Local = true;
     string password = "Test";
-
+    
+    
 
     void Start()
     {
@@ -134,6 +135,7 @@ public class ServerManager : MonoBehaviour
         };
         Action<GameAction> actLive = x => {
             Debug.Log("Opening Socket");
+            playerStore.SetActive(true);
             server.Start();
             NetworkManager.isConnected = true;
         };
@@ -142,6 +144,7 @@ public class ServerManager : MonoBehaviour
         {
             Debug.Log("Setting up");
             server.StopListen();
+            playerStore.SetActive(false);
             Destroy(lobbyLogic);
             PlayLogic.PrepareRound(this.transform);
 
