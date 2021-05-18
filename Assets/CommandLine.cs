@@ -67,6 +67,7 @@ public class CommandLine : MonoBehaviour
             }
             if (com == Command.List)
             { 
+                if (LevelManager.currentLevelMetaData != null)
                 Debug.Log(LevelManager.currentLevelMetaData);
                 foreach (Player p in PlayerManager.playerManager.players)
                 {
