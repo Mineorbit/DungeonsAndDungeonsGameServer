@@ -9,7 +9,7 @@ public class LobbyLogic : MonoBehaviour
     public void Start()
     {
         NetworkManager.readyEvent.AddListener((x) => { ready[x.Item1] = x.Item2;
-            checkGo();
+            CheckGo();
         });    
     }
 

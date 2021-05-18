@@ -125,7 +125,7 @@ public class ServerManager : MonoBehaviour
             Debug.Log("Opening Socket");
             server.Start();
             NetworkManager.isConnected = true;
-            lobbyLogic = AddComponent<LobbyLogic>();
+            lobbyLogic = gameObject.AddComponent<LobbyLogic>();
         };
 
         Action<GameAction> actPrepareGame = x =>
