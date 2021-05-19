@@ -134,7 +134,7 @@ public class ServerManager : MonoBehaviour
 
         };
         Action<GameAction> actLive = x => {
-            Debug.Log("Opening Socket");
+            Debug.Log("Server is ready");
             playerStore.SetActive(true);
             server.Start();
             NetworkManager.isConnected = true;
