@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62347b47-7030-4f1c-8019-02061def4fbc" name="Default Changelist" comment="" />
+    <list default="true" id="62347b47-7030-4f1c-8019-02061def4fbc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +39,9 @@
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Server.cs" />
       <option value="$PROJECT_DIR$/../DungeonsAndDungeons/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Client.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Client.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Animation/BaseAnimator.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Animation/EntityBaseAnimator.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Animation/PlayerBaseAnimator.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1siAR0IWGSfhFnbHtcU7A4a3gT3" />
@@ -97,6 +103,7 @@
       <workItem from="1621455257793" duration="168000" />
       <workItem from="1621455460248" duration="6537000" />
       <workItem from="1621462231393" duration="2483000" />
+      <workItem from="1621542472730" duration="1014000" />
     </task>
     <servers />
   </component>
