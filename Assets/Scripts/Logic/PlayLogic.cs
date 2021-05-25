@@ -18,9 +18,8 @@ public class PlayLogic : MonoBehaviour
     }
 
 
-    //Called on Victory
 
-    bool preparing = false;
+    static bool preparing = false;
 
     public static void PrepareRound(Transform t)
     {
@@ -52,19 +51,20 @@ public class PlayLogic : MonoBehaviour
             Debug.Log(spawn);
             PlayerManager.playerManager.SpawnPlayer(i, spawn);
         }
-        current.preparing = true;
+        preparing = true;
     }
 
-    float eps = 0.05f;
+    float eps = 0.5f;
     bool PlayersInSpawn()
     {
         for(int i = 0; i < 4;i++)
         {
             Player p = PlayerManager.GetPlayerById(i);
             
-            if (p!= null)
+            if (p != null)
             {
                 float dist = (p.transform.position - PlayerManager.playerManager.GetSpawnLocation(i)).magnitude;
+                Debug.Log("Dist "+p.transform.position+ " "+PlayerManager.playerManager.GetSpawnLocation(i));
                 if(dist > eps)
                 {
                     return false;
@@ -88,7 +88,7 @@ public class PlayLogic : MonoBehaviour
 
     public void StartRound()
     {
-
+        Debug.Log("Starting Round");
         LevelManager.StartRound(resetDynamic: false);
 
         PlayerGoal.GameWinEvent.AddListener(WinRound);
@@ -98,6 +98,7 @@ public class PlayLogic : MonoBehaviour
     }
 
 
+    //Called on Victory
     public static void WinRound()
     {
         current.winEvent.Invoke();
