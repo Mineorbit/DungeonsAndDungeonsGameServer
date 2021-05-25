@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62347b47-7030-4f1c-8019-02061def4fbc" name="Default Changelist" comment="" />
+    <list default="true" id="62347b47-7030-4f1c-8019-02061def4fbc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,7 +122,7 @@
       <workItem from="1621719025909" duration="444000" />
       <workItem from="1621765828079" duration="22259000" />
       <workItem from="1621946891432" duration="5111000" />
-      <workItem from="1621953432468" duration="1645000" />
+      <workItem from="1621953432468" duration="1773000" />
     </task>
     <servers />
   </component>
