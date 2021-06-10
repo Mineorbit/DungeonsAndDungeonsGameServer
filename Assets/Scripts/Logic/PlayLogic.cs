@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using com.mineorbit.dungeonsanddungeonscommon;
+using NetLevel;
 using UnityEngine.Events;
 
 public class PlayLogic : MonoBehaviour
