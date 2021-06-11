@@ -70,7 +70,7 @@ public class ServerManager : MonoBehaviour
         }
         SetupFSM();
         serverState.Move(GameAction.PrepareServer);
-        NetworkManager.lobbyRequestEvent.AddListener((x) => { selectedLevel = x.SelectedLevel;  });
+        NetworkManager.lobbyRequestEvent.AddListener((x) => { Debug.Log("Selected Level: "+x.SelectedLevel); selectedLevel = x.SelectedLevel;  });
     }
 
 
