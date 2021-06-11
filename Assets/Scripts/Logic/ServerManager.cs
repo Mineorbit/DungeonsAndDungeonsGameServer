@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 using System;
 using com.mineorbit.dungeonsanddungeonscommon;
+using NetLevel;
 
 public class ServerManager : MonoBehaviour
 {
@@ -52,8 +53,9 @@ public class ServerManager : MonoBehaviour
     //Settings
     public bool Local = true;
     string password = "Test";
-    
-    
+
+
+    public LevelMetaData selectedLevel;
 
     void Start()
     {
@@ -68,6 +70,7 @@ public class ServerManager : MonoBehaviour
         }
         SetupFSM();
         serverState.Move(GameAction.PrepareServer);
+        NetworkManager.lobbyRequestEvent.AddListener((x) => { selectedLevel = x.SelectedLevel;  });
     }
 
 
@@ -99,6 +102,7 @@ public class ServerManager : MonoBehaviour
             instance.performAction(ServerManager.GameAction.PrepareGame);
         }
     }
+    
     public void RemoveClient(int localid)
     {
 

@@ -30,7 +30,7 @@ public class PlayLogic : MonoBehaviour
         //Set Level As Selected
         // = LevelManager.GetSelectedLevel();
 
-        LevelMetaData levelMetaData = LevelDataManager.instance.localLevels[0];
+        LevelMetaData levelMetaData = ServerManager.instance.selectedLevel;
 
         if (levelMetaData == null)
         {
