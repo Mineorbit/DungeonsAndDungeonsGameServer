@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="62347b47-7030-4f1c-8019-02061def4fbc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logic/PlayLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Logic/PlayLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/NetworkManagerHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/NetworkManagerHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -129,6 +128,7 @@
       <workItem from="1621964457618" duration="632000" />
       <workItem from="1623286879096" duration="610000" />
       <workItem from="1623442730302" duration="2380000" />
+      <workItem from="1623447018293" duration="974000" />
     </task>
     <servers />
   </component>
