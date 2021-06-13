@@ -14,7 +14,7 @@ public class CommandLine : MonoBehaviour
         
     }
 
-    enum Command { Teleport , Spawn,Start,List};
+    enum Command { Teleport , Spawn, Start, List, Get};
 
     // Update is called once per frame
     void Update()
@@ -52,6 +52,9 @@ public class CommandLine : MonoBehaviour
                 case "list":
                     com = Command.List;
                     break;
+                case "get":
+                    com = Command.Get;
+                    break;
 
             }
 
@@ -73,6 +76,11 @@ public class CommandLine : MonoBehaviour
                 {
                     Debug.Log("Player "+p.localId+": "+p.name);
                 }
+            }
+
+            if (com == Command.Get)
+            {
+                Debug.Log("Current InstantiateType: "+Level.instantiateType);
             }
 
             if (com == Command.Start)

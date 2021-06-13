@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="62347b47-7030-4f1c-8019-02061def4fbc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/NetworkManagerHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/NetworkManagerHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CommandLine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CommandLine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +28,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/CommandLine.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Entity/Entity.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Logic/LobbyLogic.cs" />
       <option value="$PROJECT_DIR$/../DungeonsAndDungeons/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Client.cs" />
@@ -46,9 +47,10 @@
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/LevelLoadTargetNetworkHandler.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Manager/ChunkManager.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/FileManagement/FileManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Logic/PlayLogic.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/NetworkManagerHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/CommandLine.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1siAR0IWGSfhFnbHtcU7A4a3gT3" />
@@ -129,6 +131,8 @@
       <workItem from="1623286879096" duration="610000" />
       <workItem from="1623442730302" duration="2380000" />
       <workItem from="1623447018293" duration="1074000" />
+      <workItem from="1623587581856" duration="622000" />
+      <workItem from="1623590981221" duration="321000" />
     </task>
     <servers />
   </component>

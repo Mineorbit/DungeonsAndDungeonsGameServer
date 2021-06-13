@@ -219,8 +219,8 @@ public class ServerManager : MonoBehaviour
     {
         if(server != null)
         { 
-        server.DisconnectAll();
-        server.StopListen();
+            server.DisconnectAll();
+            server.StopListen();
         }
     }
 
