@@ -31,6 +31,10 @@ public class LobbyLogic : MonoBehaviour
             if (c > 0)
             {
                 ServerManager.instance.go = true;
+                for (int i = 0; i < 4; i++)
+                {
+                    ready[i] = false;
+                }
             }
         });
     }

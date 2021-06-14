@@ -75,6 +75,8 @@ public class ServerManager : MonoBehaviour
     void SetupServer()
     {
         server = new Server();
+        
+        lobbyLogic = gameObject.AddComponent<LobbyLogic>();
     }
     public void AddClient(int localId, Client c)
     {
@@ -112,6 +114,7 @@ public class ServerManager : MonoBehaviour
         return serverState.state;
     }
 
+
     private LobbyLogic lobbyLogic;
     void SetupFSM()
     {
@@ -121,7 +124,6 @@ public class ServerManager : MonoBehaviour
             SetupServer();
             Debug.Log("Setup done");
             serverState.Move(GameAction.GoLive);
-            lobbyLogic = gameObject.AddComponent<LobbyLogic>();
 
         };
         Action<GameAction> actLive = x => {
@@ -136,7 +138,6 @@ public class ServerManager : MonoBehaviour
             Debug.Log("Setting up");
             server.StopListen();
             playerStore.SetActive(false);
-            Destroy(lobbyLogic);
             PlayLogic.PrepareRound(this.transform);
 
 
@@ -148,7 +149,7 @@ public class ServerManager : MonoBehaviour
             Debug.Log("Restarting");
             PlayLogic.ClearRound();
             SpawnPlayersInLobby();
-            server.Start();
+            server.StartListen();
         };
 
         Action<GameAction> actCancel = x => {
@@ -157,14 +158,14 @@ public class ServerManager : MonoBehaviour
             PlayLogic.EndRound();
             PlayLogic.PrepareRound(this.transform);
             SpawnPlayersInLobby();
-            server.Start();
+            server.StartListen();
         };
 
         Action<GameAction> actWin = x => {
             LevelManager.Clear();
             PlayLogic.EndRound();
             SpawnPlayersInLobby();
-            server.Start();
+            server.StartListen();
         };
 
         serverState.transitions.Add(new Tuple<State, GameAction>(State.Setup, GameAction.PrepareServer), new Tuple<Action<GameAction>, State>(actSetup, State.Prepare));
