@@ -71,22 +71,11 @@ public class ServerManager : MonoBehaviour
         SetupFSM();
         serverState.Move(GameAction.PrepareServer);
         NetworkManager.lobbyRequestEvent.AddListener((x) => { Debug.Log("Selected Level: "+x.SelectedLevel); selectedLevel = x.SelectedLevel;  });
-    }
-
-
-    void SetupLogic()
-    {
-
-    }
-
-   
+    }  
     void SetupServer()
     {
         server = new Server();
     }
-
-    
-
     public void AddClient(int localId, Client c)
     {
         PlayerManager.playerManager.Add(localId,"Test", true);
@@ -129,8 +118,6 @@ public class ServerManager : MonoBehaviour
         serverState = new FSM<State, GameAction>();
         serverState.state = State.Setup;
         Action<GameAction> actSetup = x => {
-
-
             SetupServer();
             Debug.Log("Setup done");
             serverState.Move(GameAction.GoLive);
@@ -160,43 +147,24 @@ public class ServerManager : MonoBehaviour
         Action<GameAction> actDropGame = x => {
             Debug.Log("Restarting");
             PlayLogic.ClearRound();
+            SpawnPlayersInLobby();
             server.Start();
-
         };
 
         Action<GameAction> actCancel = x => {
             Debug.Log("Game canceled");
-
             LevelManager.Clear();
-
             PlayLogic.EndRound();
-
             PlayLogic.PrepareRound(this.transform);
             SpawnPlayersInLobby();
             server.Start();
-
         };
 
         Action<GameAction> actWin = x => {
-
-
-
             LevelManager.Clear();
-
-
+            PlayLogic.EndRound();
             SpawnPlayersInLobby();
             server.Start();
-            PlayLogic.EndRound();
-            PlayLogic.PrepareRound(this.transform);
-
-            foreach(Player p in PlayerManager.playerManager.players)
-            {
-                if(p!=null)
-                {
-                    //p.SendLevelList();
-                }
-            }
-
         };
 
         serverState.transitions.Add(new Tuple<State, GameAction>(State.Setup, GameAction.PrepareServer), new Tuple<Action<GameAction>, State>(actSetup, State.Prepare));
