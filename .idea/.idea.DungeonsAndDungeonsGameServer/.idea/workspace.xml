@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62347b47-7030-4f1c-8019-02061def4fbc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Manager/ChunkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Manager/ChunkManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Client.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Server.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +41,6 @@
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Entity/Player.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Logic/PlayerManager.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/PlayerNetworkHandler.cs" />
-      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Client.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/LevelObjectNetworkHandler.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/LevelLoadTargetNetworkHandler.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/FileManagement/FileManager.cs" />
@@ -48,7 +48,6 @@
       <option value="$PROJECT_DIR$/Assets/CommandLine.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Interactive/Gate.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Animation/GateBaseAnimator.cs" />
-      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Server.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/NetworkManagerHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Logic/LobbyLogic.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" />
@@ -58,6 +57,8 @@
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Manager/LevelLoadTarget.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Manager/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Manager/ChunkManager.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Client.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Server.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1siAR0IWGSfhFnbHtcU7A4a3gT3" />
@@ -149,6 +150,7 @@
       <workItem from="1624106266294" duration="1110000" />
       <workItem from="1624107471396" duration="115000" />
       <workItem from="1624292918431" duration="675000" />
+      <workItem from="1624318484208" duration="1041000" />
     </task>
     <servers />
   </component>
