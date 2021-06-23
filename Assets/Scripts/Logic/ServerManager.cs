@@ -181,7 +181,7 @@ public class ServerManager : MonoBehaviour
     void SpawnPlayersInLobby()
     {
         for (int i = 0; i < 4; i++)
-            PlayerManager.playerManager.SpawnPlayer(i, new Vector3(i * 8, 0, 0));
+            PlayerManager.playerManager.SpawnPlayer(i, new Vector3(i * 8, 6, 0));
     }
 
     void Stop()
