@@ -44,7 +44,7 @@ public class ServerManager : MonoBehaviour
         public static GameAction WinGame = new GameAction("GoLive",5);
         public static GameAction CancelGame = new GameAction("GoLive",6);
     }
-    FSM<State, GameAction> serverState;
+    public FSM<State, GameAction> serverState = new FSM<State, GameAction>();
 
     public GameObject playerStore;
     //Networking
@@ -118,7 +118,6 @@ public class ServerManager : MonoBehaviour
     private LobbyLogic lobbyLogic;
     void SetupFSM()
     {
-        serverState = new FSM<State, GameAction>();
         serverState.state = State.Setup;
         Action<GameAction> actSetup = x => {
             SetupServer();
@@ -148,7 +147,6 @@ public class ServerManager : MonoBehaviour
         Action<GameAction> actDropGame = x => {
             Debug.Log("Restarting");
             PlayLogic.ClearRound();
-            SpawnPlayersInLobby();
             server.StartListen();
         };
 
@@ -157,14 +155,12 @@ public class ServerManager : MonoBehaviour
             LevelManager.Clear();
             PlayLogic.EndRound();
             PlayLogic.PrepareRound(this.transform);
-            SpawnPlayersInLobby();
             server.StartListen();
         };
 
         Action<GameAction> actWin = x => {
             LevelManager.Clear();
             PlayLogic.EndRound();
-            SpawnPlayersInLobby();
             server.StartListen();
         };
 
@@ -178,11 +174,6 @@ public class ServerManager : MonoBehaviour
         serverState.transitions.Add(new Tuple<State, GameAction>(State.Play, GameAction.CancelGame), new Tuple<Action<GameAction>, State>(actCancel, State.Lobby));
     }
 
-    void SpawnPlayersInLobby()
-    {
-        for (int i = 0; i < 4; i++)
-            PlayerManager.playerManager.SpawnPlayer(i, new Vector3(i * 8, 6, 0));
-    }
 
     void Stop()
     {
