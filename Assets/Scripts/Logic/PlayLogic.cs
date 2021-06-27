@@ -93,6 +93,13 @@ public class PlayLogic : MonoBehaviour
         Debug.Log("Starting Round");
         LevelManager.StartRound(resetDynamic: false);
 
+        foreach (Player p in PlayerManager.playerManager.players)
+        {
+            if (p != null)
+            {
+                p.points = 0;
+            }
+        }
         PlayerGoal.GameWinEvent.AddListener(WinRound);
 
         NetworkManagerHandler.RequestStartRound();
