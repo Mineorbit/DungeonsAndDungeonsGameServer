@@ -16,11 +16,12 @@ public class LobbyLogic : MonoBehaviour
 
 
     private void Update()
-    {
+    {   /*
         if (ServerManager.instance.GetState() == ServerManager.State.Lobby)
         {
             SpawnPlayersInLobby();
         }
+        */
     }
 
     static void SpawnPlayersInLobby()
