@@ -14,36 +14,6 @@ public class LobbyLogic : MonoBehaviour
         });
     }
 
-
-    private void Update()
-    {   /*
-        if (ServerManager.instance.GetState() == ServerManager.State.Lobby)
-        {
-            SpawnPlayersInLobby();
-        }
-        */
-    }
-
-    static void SpawnPlayersInLobby()
-    {
-        for (int i = 0; i < 4; i++)
-        {
-            Player p = PlayerManager.GetPlayerById(i);
-            if(p != null)
-            {
-                Vector3 pos = LobbyPosition(i);
-                if((p.transform.position - pos).magnitude > 1f )
-                    PlayerManager.playerManager.SpawnPlayer(i, pos);
-            }
-        }
-    }
-
-    static Vector3 LobbyPosition(int i)
-    {
-        return new Vector3(i * 8, 6, 0);
-    }
-    
-    
     void CheckGo()
     {
         MainCaller.Do( () =>
