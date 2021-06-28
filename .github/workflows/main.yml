@@ -31,15 +31,13 @@ jobs:
           targetPlatform: ${{ matrix.targetPlatform }}
           customParameters: -EnableHeadlessMode
       - run: ls 
-      - name: copy file via ssh password
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          overwrite: true
-          source: format("build/{0}/*",${{ matrix.targetPlatform }})
-          target: "DungeonsAndDungeonsGameServer"
+      - name: Deploy
+        uses: nogsantos/scp-deploy@master
+          src: ./build/*
+          host: 46.232.248.108
+          remote: /home/max/DungeonsAndDungeonsGameServer
+          user: max
+          key: ${{secrets.PASSWORD}}
       - uses: actions/upload-artifact@v2
         with:
           name: Build-${{ matrix.targetPlatform }}
