@@ -30,6 +30,7 @@ jobs:
         with:
           targetPlatform: ${{ matrix.targetPlatform }}
           customParameters: -EnableHeadlessMode
+      - run: ls 
       - name: copy file via ssh password
         uses: appleboy/scp-action@master
         with:
