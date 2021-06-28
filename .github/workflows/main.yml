@@ -36,7 +36,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          port: 21
+          overwrite: true
           source: format("build/{0}/*",${{ matrix.targetPlatform }})
           target: "DungeonsAndDungeonsGameServer"
       - uses: actions/upload-artifact@v2
