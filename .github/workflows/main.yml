@@ -1,0 +1,45 @@
+name: Build Server
+
+on: [push, pull_request]
+
+jobs:
+  buildForAllSupportedPlatforms:
+    name: Build for ${{ matrix.targetPlatform }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        targetPlatform:
+          - StandaloneLinux64 # Build a Linux 64-bit standalone.
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          lfs: true
+        
+      - name: Checkout submodules
+        uses: textbook/git-checkout-submodule-action@master
+      - uses: actions/cache@v2
+        with:
+          path: Library
+          key: Library-${{ matrix.targetPlatform }}
+          restore-keys: Library-
+      - uses: game-ci/unity-builder@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          targetPlatform: ${{ matrix.targetPlatform }}
+          customParameters: -EnableHeadlessMode
+      - run: ls 
+      - name: Deploy
+        uses: nogsantos/scp-deploy@master
+        with:
+          src: ./build/*
+          host: 46.232.248.108
+          remote: /home/max/DungeonsAndDungeonsGameServer
+          user: max
+          key: ${{secrets.KEY}}
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Build-${{ matrix.targetPlatform }}
+          path: build/${{ matrix.targetPlatform }}
