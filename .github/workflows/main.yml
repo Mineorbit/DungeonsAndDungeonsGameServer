@@ -32,7 +32,10 @@ jobs:
         with:
           targetPlatform: ${{ matrix.targetPlatform }}
           customParameters: -EnableHeadlessMode
-      - run: ls 
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Build-${{ matrix.targetPlatform }}
+          path: build/${{ matrix.targetPlatform }}
       - name: Deploy
         uses: nogsantos/scp-deploy@master
         with:
@@ -41,7 +44,3 @@ jobs:
           remote: /home/max/DungeonsAndDungeonsGameServer
           user: max
           key: ${{secrets.KEY}}
-      - uses: actions/upload-artifact@v2
-        with:
-          name: Build-${{ matrix.targetPlatform }}
-          path: build/${{ matrix.targetPlatform }}
