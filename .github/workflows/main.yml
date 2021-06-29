@@ -38,7 +38,7 @@ jobs:
           host: 46.232.248.108
           remote: /home/max/DungeonsAndDungeonsGameServer
           user: max
-          key: ${{secrets.PASSWORD}}
+          key: ${{secrets.KEY}}
       - uses: actions/upload-artifact@v2
         with:
           name: Build-${{ matrix.targetPlatform }}
