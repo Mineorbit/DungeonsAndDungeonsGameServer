@@ -2,7 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62347b47-7030-4f1c-8019-02061def4fbc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DungeonsAndDungeonsGameServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/BehaviourTree.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/BehaviourTree.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item/Item.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item/Item.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item/Shield.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item/Shield.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item/Sword.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item/Sword.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logic/PlayLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Logic/PlayLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Floor.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Floor.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Interactive/Button.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Interactive/Button.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Interactive/Gate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Interactive/Gate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Interactive/HeldButton.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Interactive/HeldButton.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Interactive/Lamp.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Interactive/Lamp.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Interactive/Lever.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Interactive/Lever.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Interactive/Spike.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Interactive/Spike.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Interactive/Wire.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Interactive/Wire.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Ladder.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Ladder.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/SmallFloor.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/SmallFloor.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Stair.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Environment/Stair.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Item/Shield.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Item/Shield.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Item/Sword.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Resources/LevelObjectData/Item/Sword.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/AI/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/AI/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Item/ItemHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Item/ItemHandle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Data/LevelObjectData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Data/LevelObjectData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Entity/Blog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Entity/Blog.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Entity/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Entity/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Interactive/Gate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Interactive/Gate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Item/Sword.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Item/Sword.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/LevelObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/LevelObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/CustomEnum.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/CustomEnum.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/FileManagement/FileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/FileManagement/FileManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/FileManagement/FileStructureProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/FileManagement/FileStructureProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/Hitbox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/Hitbox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/Instantiable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/Instantiable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/Option.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/Option.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Client.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/HttpManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/HttpManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/EntityNetworkHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/EntityNetworkHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/LevelObjectNetworkHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/LevelObjectNetworkHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/NetworkHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/NetworkHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/PlayerNetworkHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/PlayerNetworkHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Play/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Play/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,7 +60,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -26,38 +76,58 @@
     <setting file="file://$PROJECT_DIR$/../DungeonsAndDungeons/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Client.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@10.4.0/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.6/Editor/State/WindowState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../DungeonsAndDungeons/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Manager/LevelLoadTarget.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Editor/GameBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../DungeonsAndDungeons/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Manager/LevelLoadTarget.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@10.4.0/Runtime/Debugging/DebugManager.Actions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/../DungeonsAndDungeons/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Client.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Animation/BaseAnimator.cs" />
-      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Animation/EntityBaseAnimator.cs" />
-      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Animation/PlayerBaseAnimator.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Manager/LevelLoadTargetMover.cs" />
-      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Entity/Player.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Logic/PlayerManager.cs" />
-      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/PlayerNetworkHandler.cs" />
-      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/LevelObjectNetworkHandler.cs" />
-      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/LevelLoadTargetNetworkHandler.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/FileManagement/FileManager.cs" />
       <option value="$PROJECT_DIR$/Assets/CommandLine.cs" />
-      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Interactive/Gate.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Animation/GateBaseAnimator.cs" />
-      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/NetworkManagerHandler.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Manager/LevelLoadTarget.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Manager/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Manager/ChunkManager.cs" />
       <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Server.cs" />
-      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Entity/Entity.cs" />
-      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/EntityNetworkHandler.cs" />
-      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkManager.cs" />
-      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Client.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" />
-      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/NetworkHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Logic/LobbyLogic.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Item/Shield.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Logic/PlayLogic.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Logic/ServerManager.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Animation/BlogBaseAnimator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Item/Item.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Item/Sword.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Animation/EntityBaseAnimator.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Entity/Entity.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/NetworkManagerHandler.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/LevelLoadTargetNetworkHandler.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Animation/PlayerBaseAnimator.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Entity/Blog.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Data/LevelObjectData.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Interactive/Gate.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/Hitbox.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/FileManagement/FileStructureProfile.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/LevelObjectNetworkHandler.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/NetworkHandler.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/PlayerNetworkHandler.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/Level.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/AI/EnemyController.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/CustomEnum.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/Instantiable.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Misc/Option.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkManager.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/HttpManager.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/Client.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Item/ItemHandle.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/LevelObject.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Entity/Player.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Network/NetworkHandlers/EntityNetworkHandler.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Editor/GameBuilder.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Level/Structure/LevelObject/Item/Sword.cs" />
+      <option value="$PROJECT_DIR$/Packages/DungeonsAndDungeonsCommon/Runtime/Play/PlayerController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1siAR0IWGSfhFnbHtcU7A4a3gT3" />
@@ -162,6 +232,10 @@
       <workItem from="1624826323595" duration="238000" />
       <workItem from="1624832144642" duration="77000" />
       <workItem from="1624889164546" duration="111000" />
+      <workItem from="1624999478203" duration="2000" />
+      <workItem from="1624999887756" duration="2122000" />
+      <workItem from="1625054043997" duration="1179000" />
+      <workItem from="1625056280792" duration="3800000" />
     </task>
     <servers />
   </component>

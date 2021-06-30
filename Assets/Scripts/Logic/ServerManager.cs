@@ -52,7 +52,6 @@ public class ServerManager : MonoBehaviour
 
     //Settings
     public bool Local = true;
-    string password = "Test";
 
 
     public LevelMetaData selectedLevel;
@@ -106,7 +105,8 @@ public class ServerManager : MonoBehaviour
 
     public void OnDestroy()
     {
-        Server.instance.DisconnectAll();
+        if(Server.instance != null)
+            Server.instance.DisconnectAll();
     }
 
     public State GetState()

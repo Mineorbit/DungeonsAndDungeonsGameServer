@@ -8,7 +8,6 @@ using UnityEngine.Events;
 public class PlayLogic : MonoBehaviour
 {
 
-    long levelId = 0;
     public static PlayLogic current;
     UnityEvent winEvent = new UnityEvent();
     
