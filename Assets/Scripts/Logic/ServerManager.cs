@@ -60,6 +60,8 @@ public class ServerManager : MonoBehaviour
     {
         //This is necessary
         NetworkHandler.isOnServer = true;
+        
+        GameConsole.Log("IS ON SERVER "+NetworkHandler.isOnServer);
 
         Level.instantiateType = Level.InstantiateType.Default;
         if (instance==null)
