@@ -58,6 +58,8 @@ public class ServerManager : MonoBehaviour
 
     void Start()
     {
+        //This is necessary
+        NetworkHandler.isOnServer = true;
 
         Level.instantiateType = Level.InstantiateType.Default;
         if (instance==null)
