@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637610249770000000
+      ticks: 637610294640000000
     m_Hash: 793249658
   m_LockFileStatus:
     m_FilePath: /home/max/DungeonsAndDungeonsGameServer/Packages/packages-lock.json
@@ -13,8 +13,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637610249780000000
-    m_Hash: 3060014668
+      ticks: 637610294640000000
+    m_Hash: 4268041019
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -25,7 +25,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 0.1.6
       source: 5
-      resolvedPath: /home/max/DungeonsAndDungeonsGameServer/Library/PackageCache/com.mineorbit.dungeonsanddungeonscommon@de32e8745d
+      resolvedPath: /home/max/DungeonsAndDungeonsGameServer/Library/PackageCache/com.mineorbit.dungeonsanddungeonscommon@46015e00b9
       assetPath: Packages/com.mineorbit.dungeonsanddungeonscommon
       name: com.mineorbit.dungeonsanddungeonscommon
       displayName: Dungeons And Dungeons Commmon
