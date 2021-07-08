@@ -16,6 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
+          submodules: true
           fetch-depth: 0
           lfs: true
       - uses: game-ci/unity-builder@v2
