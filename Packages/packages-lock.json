@@ -1,11 +1,10 @@
 {
   "dependencies": {
     "com.mineorbit.dungeonsanddungeonscommon": {
-      "version": "https://github.com/Mineorbit/DungeonsAndDungeonsCommon.git",
+      "version": "file:--force",
       "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "46015e00b9ac46f3d3bec10bdb1c3f6de6d75e50"
+      "source": "embedded",
+      "dependencies": {}
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
